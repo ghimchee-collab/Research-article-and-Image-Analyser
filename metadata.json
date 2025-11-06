@@ -1,0 +1,5 @@
+{
+  "name": "Research Article and Image Analyser",
+  "description": "An application to help researchers analyze academic articles by generating structured summaries, evaluating relevance to research questions, and visualizing dominant themes using Gemini.",
+  "requestFramePermissions": []
+}
