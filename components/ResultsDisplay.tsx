@@ -1,9 +1,7 @@
-
 import React, { useRef } from 'react';
 import { AnalysisResult } from '../types';
-
-declare const jspdf: any;
-declare const html2canvas: any;
+import { jsPDF } from 'jspdf';
+import html2canvas from 'html2canvas';
 
 interface ResultsDisplayProps {
     result: AnalysisResult;
@@ -26,7 +24,6 @@ export const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ result, wordClou
     const resultsContentRef = useRef<HTMLDivElement>(null);
 
     const handleExportPDF = async () => {
-        const { jsPDF } = jspdf;
         const input = resultsContentRef.current;
         if (input) {
             const canvas = await html2canvas(input, { scale: 2 });
